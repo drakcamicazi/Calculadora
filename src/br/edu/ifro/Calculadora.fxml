@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.CalculadoraController">
+   <children>
+      <BorderPane layoutX="231.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Pane layoutY="69.0" prefHeight="220.0" prefWidth="207.0">
+                     <children>
+                        <TextField fx:id="txtValor1" layoutY="10.06689453125" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Primeiro Valor" />
+                        <TextField fx:id="txtValor2" layoutY="73.06689453125" />
+                        <Text layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Segundo Valor" />
+                        <Button fx:id="btnSomar" layoutY="112.06689453125" mnemonicParsing="false" onAction="#Somar" prefHeight="26.0" prefWidth="31.0" text="+" />
+                        <Button fx:id="btnSubtrair" layoutX="41.0" layoutY="112.06689453125" mnemonicParsing="false" onAction="#Subtrair" prefHeight="26.0" prefWidth="31.0" text="-" />
+                        <Button fx:id="btnMultiplicar" layoutX="82.0" layoutY="112.06689453125" mnemonicParsing="false" onAction="#Multiplicar" prefHeight="26.0" prefWidth="31.0" text="x" />
+                        <Button fx:id="btnDividir" layoutX="123.0" layoutY="112.06689453125" mnemonicParsing="false" onAction="#Dividir" prefHeight="26.0" prefWidth="31.0" text="/" />
+                        <Text layoutY="172.06689453125" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado:" />
+                        <Text fx:id="txtResultado" layoutX="1.0" layoutY="203.93310546875" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                     </children>
+                  </Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="30.0" />
+               </BorderPane.margin>
+            </Pane>
+         </left>
+         <top>
+            <Label text="Calculadora" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </top>
+         <right>
+            <Pane prefHeight="370.0" prefWidth="309.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="310.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="310.0" text="Histórico" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Pane>
+         </right>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>
